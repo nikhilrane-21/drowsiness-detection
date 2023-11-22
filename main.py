@@ -1,7 +1,30 @@
+import streamlit as st
+
+# Streamlit Components
+st.set_page_config(
+    page_title="Drowsiness Detection | SixthSens AI",
+    page_icon="https://learnopencv.com/wp-content/uploads/2017/12/favicon.png",
+    layout="wide",  # centered, wide
+    initial_sidebar_state="expanded",
+)
+
+hide_streamlit_style = """
+            <style>
+            .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
+            .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
+            .viewerBadge_text__1JaDK {display: none;}
+            MainMenu {visibility: hidden;}
+            header { visibility: hidden; }
+            footer {visibility: hidden;}
+            #GithubIcon {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 import os
 import av
 import threading
-import streamlit as st
+
 import streamlit_nested_layout
 from streamlit_webrtc import VideoHTMLAttributes, webrtc_streamer
 
@@ -13,16 +36,7 @@ from drowsy_detection import VideoFrameHandler
 # Define the audio file to use.
 alarm_file_path = os.path.join("audio", "wake_up.wav")
 
-# Streamlit Components
-st.set_page_config(
-    page_title="Drowsiness Detection | LearnOpenCV",
-    page_icon="https://learnopencv.com/wp-content/uploads/2017/12/favicon.png",
-    layout="wide",  # centered, wide
-    initial_sidebar_state="expanded",
-    menu_items={
-        "About": "### Visit www.learnopencv.com for more exciting tutorials!!!",
-    },
-)
+
 
 
 # col1, col2 = st.columns(spec=[6, 2], gap="medium")
