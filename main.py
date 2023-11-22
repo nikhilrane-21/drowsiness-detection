@@ -94,10 +94,11 @@ ctx = webrtc_streamer(
     audio_frame_callback=audio_frame_callback,
     rtc_configuration={"iceServers": [
       {
-        "urls": "turn:a.relay.metered.ca:80",
+        "urls": "turn:a.relay.metered.ca:80?transport=tcp",
         "username": "9d79830e9a30b210d0582c23",
         "credential": "6TzT7r9tBsdKHdMD",
       },
+
 
 
   ]},  # Add this to config for cloud deployment.
