@@ -117,8 +117,8 @@ ctx = webrtc_streamer(
         "credential": "6TzT7r9tBsdKHdMD",
       },
   ]},  # Add this to config for cloud deployment.
-    media_stream_constraints={"video": {"height": {"ideal": 480}}, "audio": False},
-    video_html_attrs=VideoHTMLAttributes(autoPlay=True, controls=False, muted=True),
+    media_stream_constraints={"video": {"height": {"ideal": 480}}, "audio": True},
+    video_html_attrs=VideoHTMLAttributes(autoPlay=True, controls=False, muted=False),
 )
 
 # with col2:
