@@ -1,6 +1,7 @@
 import streamlit as st
 
 # Streamlit Components
+
 st.set_page_config(
     page_title="Drowsiness Detection | SixthSens AI",
     page_icon="https://learnopencv.com/wp-content/uploads/2017/12/favicon.png",
